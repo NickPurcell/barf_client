@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 24px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color-scheme: dark;
+        }
+        h2 { font-size: 18px; margin-bottom: 16px; color: #fff; }
+        .warning {
+            background: #3d2f00;
+            border: 1px solid #d4a500;
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #ffd54f;
+        }
+        #error { color: #ff6b6b; font-size: 13px; margin-bottom: 12px; min-height: 20px; }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 4px;
+        }
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            background: #2a2a2a;
+            color: #fff !important;
+            caret-color: #fff;
+            -webkit-text-fill-color: #fff !important;
+            appearance: none;
+            -webkit-appearance: none;
+            forced-color-adjust: none;
+        }
+        input::placeholder { color: #666; }
+        input::selection {
+            background: rgba(74, 158, 255, 0.35);
+            color: #fff;
+        }
+        input:focus { outline: none; border-color: #4a9eff; }
+
+        .input-with-button {
+            display: flex;
+            gap: 8px;
+        }
+        .input-with-button input {
+            flex: 1;
+        }
+        .input-with-button button {
+            padding: 8px 12px;
+            font-size: 13px;
+            background: #333;
+            color: #ccc;
+            border: 1px solid #444;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .input-with-button button:hover {
+            background: #444;
+        }
+
+        .buttons { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }
+        button {
+            padding: 8px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #connectBtn { background: #4a9eff; color: #fff; }
+        #connectBtn:hover { background: #3a8eef; }
+        #connectBtn:disabled { background: #666; cursor: wait; }
+        #cancelBtn { background: #444; color: #ccc; }
+        #cancelBtn:hover { background: #555; }
+    </style>
+</head>
+<body>
+    <h2>BARF Settings</h2>
+    <div class="warning">
+        This Agent runs in YOLO mode - tools execute without confirmation!
+    </div>
+    <div id="error"></div>
+
+    <div class="form-group">
+        <label for="ip">Raspberry Pi IP Address</label>
+        <input type="text" id="ip" placeholder="e.g., 192.168.1.100" />
+    </div>
+
+    <div class="form-group">
+        <label for="apiKey">OpenAI API Key</label>
+        <div class="input-with-button">
+            <input type="password" id="apiKey" placeholder="sk-..." />
+            <button type="button" id="toggleApiKey">Show</button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="model">OpenAI Model</label>
+        <input type="text" id="model" placeholder="e.g., o4-mini, gpt-4o" />
+    </div>
+
+    <div class="buttons">
+        <button id="cancelBtn">Cancel</button>
+        <button id="connectBtn">Connect</button>
+    </div>
+</body>
+</html>

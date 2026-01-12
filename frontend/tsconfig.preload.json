@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "dist-electron",
+    "rootDir": ".",
+    "strict": true,
+    "lib": ["ESNext"],
+    "types": ["node"]
+  },
+  "include": ["electron/preload.ts"]
+}

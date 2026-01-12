@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "dist-electron",
+    "rootDir": ".",
+    "strict": true,
+    "lib": ["ESNext"],
+    "types": ["node"]
+  },
+  "include": ["electron/main.ts"]
+}

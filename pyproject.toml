@@ -1,0 +1,13 @@
+[project]
+name = "barf-host"
+version = "1.0.0"
+description = "BARF Host - Browser Agentic Raspberry Pi Framework"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.13.2",
+    "fastapi>=0.124.0",
+    "openai-agents>=0.6.2",
+    "python-dotenv>=1.0.1",
+    "uvicorn[standard]>=0.38.0",
+]
