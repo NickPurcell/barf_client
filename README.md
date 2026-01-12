@@ -1,6 +1,6 @@
 # BARF Host
 
-Desktop application for debugging Raspberry Pi devices via UART using AI-powered conversational interface.
+Desktop application for debugging Raspberry Pi devices via UART/I2C using AI-powered conversational interface.  Built to be used in conjunction with barf_mcp_server: https://github.com/NickPurcell/barf_mcp_server
 
 ## Prerequisites
 
