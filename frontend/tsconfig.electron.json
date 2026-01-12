@@ -6,10 +6,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "outDir": "dist-electron",
-    "rootDir": ".",
+    "rootDir": "electron",
     "strict": true,
     "lib": ["ESNext"],
     "types": ["node"]
   },
-  "include": ["electron/main.ts"]
+  "include": ["electron/**/*.ts"]
 }
