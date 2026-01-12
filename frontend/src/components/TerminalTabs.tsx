@@ -33,9 +33,14 @@ export const TerminalTabs: React.FC = () => {
                 </button>
             </div>
 
-            {/* Terminal Content */}
-            <div className="flex-1 overflow-hidden">
-                {activeTab === 'uart' ? <UARTTerminal /> : <I2CTerminal />}
+            {/* Terminal Content - Both mounted, visibility toggled */}
+            <div className="flex-1 overflow-hidden relative">
+                <div className={`absolute inset-0 ${activeTab !== 'uart' ? 'hidden' : ''}`}>
+                    <UARTTerminal />
+                </div>
+                <div className={`absolute inset-0 ${activeTab !== 'i2c' ? 'hidden' : ''}`}>
+                    <I2CTerminal />
+                </div>
             </div>
         </div>
     );
